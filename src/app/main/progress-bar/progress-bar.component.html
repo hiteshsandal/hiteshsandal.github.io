@@ -1,0 +1,22 @@
+<!-- <div class="skill">
+    <div class="row parent-div-skill">
+        <div class="col-lg-9 skill-background">
+            <p class="skill-name">Angular</p>
+            <div class="skill-amount"></div>
+        </div>
+        <div class="col-lg-3">
+            90%
+        </div>
+    </div>
+</div> -->
+<div class="skill"> 
+    <div class="skill-progress-bar">
+        <div class="skill-background">
+            <p class="skill-name">{{skillName}}</p>
+            <div [style.width]="skillProgress+'%'" [style.background-color]="skillsColor" class="skill-amount"></div>
+        </div> 
+    </div>
+    <div class="skill-figure">
+        {{skillProgress}}%
+    </div>
+</div>

@@ -1,0 +1,28 @@
+*{
+    background-color: #faeddf;
+}
+html{
+    width: 100%;
+    height: 100%;
+    /* background-color: #f0deca; */
+}
+
+
+.shade-medium-bg{
+    background-color: #f0deca;
+}
+
+
+
+.shade-medium{
+    color: #f0deca;
+}
+.shade-dark{
+    color: #7a5932;
+}
+.mat-expansion-indicator{
+    background-color: #fff;
+}
+.font-montserrat{
+    font-family: Montserrat;
+}

@@ -1,0 +1,101 @@
+.education{
+    /* position: relative;     */
+    height: 10em;
+    margin: 2rem 0px;
+    padding: 3em 0px
+}
+
+.education-section{
+    display: flex;
+    height: 100%;
+}
+
+.education-middle{
+    position: relative;
+    width: 5em;
+}
+
+.education-middle .circle-border{
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    border-radius: 100%;
+}
+
+.circle-fill{
+    background: #aaa;
+    border: 2px solid;
+    width: 25%;
+    height: 12.5%;
+    position: absolute;
+    border-radius: 100%;
+}
+
+
+
+span.timeline-circle {
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+span.timeline-circle {
+    border-color: #188497;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 3px solid #188497;
+    position: absolute;
+    left: 16px;
+    top: 3px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+span.timeline-circle:hover {
+    background: #188497;
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 24px;
+    top: 11px;
+    border-radius: 90%;
+    background-color: #188497;
+    opacity: 1;
+    transition: 0.5s;
+}
+.border-circle{
+    position: absolute;
+    width: 4px;
+    height: 70%;
+    top: 3rem;
+    left: calc(2.3em - 4px);
+    background: #188497;
+    transition: 0.5s;
+}
+
+.education-year{
+    color: #188497;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.education-detail{
+    display: flex;
+    font-weight: bold;
+    font-size:0.7em;
+}
+
+.education-info{
+    /* margin-top: 1em; */
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    font-size: 0.8em;
+}

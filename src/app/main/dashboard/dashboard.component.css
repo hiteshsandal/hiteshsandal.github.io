@@ -1,0 +1,176 @@
+header#navbar-header{
+    padding: 1rem 0px;
+}
+nav{
+    /* background-color: #faeddf; */
+    justify-content: space-between;
+}
+
+.active{
+    color: #198597!important;
+}
+
+nav a{
+    color: #7a5932;
+}
+
+.nav-link:hover{
+    color: #198597;
+}
+
+.nav-row{
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-row nav{
+    font-family: Montserrat;
+    letter-spacing: .5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.row{
+    max-width: 100%;
+    margin: 0;
+}
+
+
+.introduction{
+    min-height: 40rem;
+}
+.about{
+    min-height: 30rem;
+}
+.skills{
+    min-height: 40rem;
+}
+.experience{
+    min-height: 25rem;
+}
+
+.borderRed{
+    border: 2px solid red;
+}
+.borderGreen{
+    border: 2px solid green;
+}
+
+#dashboard-img{
+    height: inherit;
+    width: 100%;
+}
+
+.name{
+    font-size: 100px;
+    font-weight: lighter;
+    line-height: 1em;
+}
+.career-objective{
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.code{
+    font-weight: bolder;
+}
+
+.about-text{
+    background-color: #198597;
+    color: #fcf7f1;
+}
+.about-main{
+    background-color: #fcf7f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wb{
+    background-color: #fcf7f1;
+}
+
+div.about-main {
+    text-align: justify;
+}
+
+i#intro-i{
+    position: absolute;
+    top:29rem;
+    left: 4.5rem;
+    font-size: 4rem;
+    background-color: rgba(240,222,202,0.3);
+    color: rgba(122,89,50,0.2);
+}
+
+.about-i{
+    position: absolute;
+    font-size: 4rem;
+    background-color: rgba(252,247,242,0.1);
+    color: rgba(122,89,50,0.2)
+}
+
+.convo-icon{
+    top: 8rem;
+    left: 3rem;
+}
+.angular-icon{
+    top:3rem;
+    right: 3rem;
+}
+.confluence-icon{
+    top: 50%;
+    left: 70%;
+}
+.jira-icon{
+    bottom: 10%;
+    left: 20%;
+}
+.server-icon{
+    left: 40%;
+    top: 10%;
+    font-size: 3rem;
+}
+
+.code-i{
+    bottom: 15%;
+    right: 40%;
+    font-size: 3rem;
+}
+
+.main-component{
+    padding-bottom: 10rem;
+}
+
+.section-dafault{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.skills-text{
+    background-color: #f8a577;
+    color: #fff;
+}
+
+.skills-main{
+    background-color: #f0deca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.samsung{
+    position: absolute;
+    opacity: 0.3;
+    top:30%;
+    left:30%;
+}
+
+.experience-main{
+    position: relative;
+}

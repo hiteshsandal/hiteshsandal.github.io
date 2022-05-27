@@ -1,0 +1,24 @@
+div.color, p.color{
+    background-color: #f0deca;
+}
+
+.experience{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+.expansion-panel-header{
+    padding: 1rem 2rem;
+    background-color: var(--templateColor);
+    color: black;
+}
+
+.expansion-panel-title{
+    background-color: var(--templateColor);
+    margin-right: unset;
+}
+
+
+.expansion-panel-hidden{
+    padding-top:2rem;
+}
