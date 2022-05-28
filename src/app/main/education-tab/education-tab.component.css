@@ -70,7 +70,7 @@ span.timeline-circle:hover {
     width: 4px;
     height: 70%;
     top: 3rem;
-    left: calc(2.3em - 4px);
+    left: calc(2.3em - 1px);
     background: #188497;
     transition: 0.5s;
 }

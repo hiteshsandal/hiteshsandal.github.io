@@ -3,7 +3,7 @@
     <div class="row nav-row">
         <div class="col-lg-8">
             <nav class="nav">
-                <a class="nav-link shade-dark" [ngClass]="{active: index==0}" target="_blank" [href]="navoption.href" *ngFor="let navoption of navbarOptions; let index = index;">{{navoption.name}}</a>
+                <a class="nav-link shade-dark" [ngClass]="{active: index==selectedOption}" (click)="scrollToView(navoption.name)" *ngFor="let navoption of navbarOptions; let index = index;">{{navoption.name}}</a>
             </nav>
         </div>
     </div>
@@ -13,7 +13,7 @@
 
 <div class="main-component">
     <!-- introduction -->
-    <div class="row justify-content-center pt-4 introduction">
+    <div id="Home" class="row justify-content-center pt-4 introduction">
         <div class="d-flex col-lg-10">
             <div class="col-lg-4">
                 <img id="dashboard-img" class="img-fluid" src="./assets/resume_dashboard.jpg" alt="Hitesh Sandal">
@@ -31,7 +31,7 @@
     
     
     <!-- about -->
-    <div class="row about justify-content-center">
+    <div id="About" class="row about justify-content-center">
         <div class="d-flex col-lg-10">
             <div class="col-lg-4 about-text section-dafault font-montserrat">
                 About
@@ -53,7 +53,7 @@
     
     
     <!-- Skills -->
-    <div class="row skills justify-content-center">
+    <div id="Skills" class="row skills justify-content-center">
         <div class="d-flex col-lg-10">
             
             <div class="col-lg-8 skills-main" style="position: relative;">
@@ -84,7 +84,7 @@
     
     
     <!-- Education -->
-    <div class="row skills justify-content-center">
+    <div id="Education" class="row skills justify-content-center">
         <div class="d-flex col-lg-10">
             <div  [style.background-color]="educationColor" class="col-lg-4 section-dafault font-montserrat">
                 Education
@@ -102,35 +102,34 @@
             </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-
-<!-- Experience -->
-<div class="row experience justify-content-center">
-    <div class="d-flex col-lg-10">
-        <div class="col-lg-8 experience-main" [style.background-color]="experienceBodyColor">
-            <img class="samsung shade-medium-bg" src="https://image.samsungsds.com/module_src/images/default/logo_black.svg?queryString=20220517110935" alt="">
-            <div class="col-lg-12 font-montserrat" [style.background-color]="experienceBodyColor">
-                <span *ngFor="let exp of experienceDetails">
-                    <experience  [corporateName]="exp.corporateName"
-                    [experienceTimeFrame]="exp.experienceTimeFrame"
-                    [experienceDetails]="exp.experienceDetails"
-                    [bodyColor]="experienceBodyColor" 
-                    [sectionColor]="experienceColor">
-                </experience>
-            </span>
+    
+    
+    
+    
+    
+    <!-- Experience -->
+    <div id="Experience" class="row experience justify-content-center">
+        <div class="d-flex col-lg-10">
+            <div class="col-lg-8 experience-main" [style.background-color]="experienceBodyColor">
+                <img class="samsung shade-medium-bg" src="https://image.samsungsds.com/module_src/images/default/logo_black.svg?queryString=20220517110935" alt="">
+                <div class="col-lg-12 font-montserrat" [style.background-color]="experienceBodyColor">
+                    <span *ngFor="let exp of experienceDetails">
+                        <experience  [corporateName]="exp.corporateName"
+                        [experienceTimeFrame]="exp.experienceTimeFrame"
+                        [experienceDetails]="exp.experienceDetails"
+                        [bodyColor]="experienceBodyColor" 
+                        [sectionColor]="experienceColor">
+                    </experience>
+                </span>
+            </div>
+        </div>
+        <div  [style.background-color]="experienceColor" class="col-lg-4 section-dafault font-montserrat">
+            Experience
         </div>
     </div>
-    <div  [style.background-color]="experienceColor" class="col-lg-4 section-dafault font-montserrat">
-        Experience
-    </div>
-</div>
 </div>
 
 
 
+</div>
 </div>

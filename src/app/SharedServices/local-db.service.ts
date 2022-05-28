@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NavbarOption,SkillsOption, EducationDetails, ExperienceDetails } from '../model/resume.model';
+import { NavbarOption, SkillsOption, EducationDetails, ExperienceDetails } from '../model/resume.model';
 
 
 
@@ -12,12 +12,20 @@ export class LocalDBService {
   skillsOption: SkillsOption[] = [];
   educationDetails: EducationDetails[] = [];
   experienceDetails: ExperienceDetails[] = [];
+  introduction: string;
+  about: string;
+  skillsWelcomeText: string; 
 
   constructor() {
     this.setNavbar();
     this.setSkills();
     this.setEducationDetails();
     this.setExperienceDetails();
+
+    this.introduction = "STOP. PLAN. CREATE. I believe in fostering an innovative and creative, approach to fuel engaging experiences that reflect a positive impact on the world."
+    this.about = "A fullstack developer at Samsung Data System with experience in technologies like Angular 7+, .NET Framework (ASP.NET Web API), SQL Server etc. Also, good understanding of data structures in C/C++/C#. <br /> <br />I like to make things that make a difference. Innovative, outcome-driven individual looking to further my career in software engineer and work with industries and technologies that inspire change.";
+    this.skillsWelcomeText = "I have been collecting these skills right from my college be it professional or personnal skill. These skills ranges from technology stacks that I use in software development to skills that I use for myselfs"
+    // this.about = "I am a software engineer and like to make things that make a difference. Innovative, outcome-driven individual looking to further my career in software engineer and work with industries and technologies that inspire change."
   }
   
   
@@ -34,18 +42,27 @@ export class LocalDBService {
   getExperienceDetails():ExperienceDetails[]{
     return this.experienceDetails;
   }
+
+  getIntroductionText(){
+    return this.introduction;
+  }
+
+  getSkillsWelcomeText(){
+    return this.skillsWelcomeText;
+  }
+
+  getAboutText(){
+    return this.about;
+  }
   
   setNavbar():void {
     const localNavbarOptions = [
-      { name: "Home", href: "https://www.google.com" },
-      { name: "About", href:""},
-      { name: "Profile", href:""},
-      { name: "Experience", href:""},
-      { name: "Cover Letter", href:""},
-      { name: "Skills", href:""},
-      { name: "Education", href:""},
-      { name: "Facts", href:""},
-      { name: "Contact", href:""}
+      { id: 0, name: "Home"},
+      { id: 1, name: "About"},
+      { id: 2, name: "Skills"},
+      { id: 3, name: "Education"},
+      { id: 4, name: "Experience"}
+      // { name: "Facts", href:""}
     ];
     this.navbarOption = localNavbarOptions;
   }

@@ -1,7 +1,7 @@
 
 export interface NavbarOption{
+    id: number;
     name: string;
-    href: string;
 }
 
 export interface SkillsOption{

@@ -12,6 +12,7 @@ nav{
 
 nav a{
     color: #7a5932;
+    cursor: pointer;
 }
 
 .nav-link:hover{
@@ -47,6 +48,7 @@ nav a{
 }
 .experience{
     min-height: 25rem;
+    padding: unset;
 }
 
 .borderRed{
@@ -140,7 +142,7 @@ i#intro-i{
 }
 
 .main-component{
-    padding-bottom: 10rem;
+    padding-bottom: 7rem;
 }
 
 .section-dafault{
