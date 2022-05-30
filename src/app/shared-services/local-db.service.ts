@@ -24,7 +24,7 @@ export class LocalDBService {
 
     this.introduction = "STOP. PLAN. CREATE. I believe in fostering an innovative and creative, approach to fuel engaging experiences that reflect a positive impact on the world."
     this.about = "A fullstack developer at Samsung Data System with experience in technologies like Angular 7+, .NET Framework (ASP.NET Web API), SQL Server etc. Also, good understanding of data structures in C/C++/C#. <br /> <br />I like to make things that make a difference. Innovative, outcome-driven individual looking to further my career in software engineer and work with industries and technologies that inspire change.";
-    this.skillsWelcomeText = "I have been collecting these skills right from my college be it professional or personnal skill. These skills ranges from technology stacks that I use in software development to skills that I use for myselfs"
+    this.skillsWelcomeText = "I have been collecting these skills right from my college be it a professional or a personnal skill. These skills ranges from technology stacks that I use in software development to skills that I use for myselfs."
     // this.about = "I am a software engineer and like to make things that make a difference. Innovative, outcome-driven individual looking to further my career in software engineer and work with industries and technologies that inspire change."
   }
   
