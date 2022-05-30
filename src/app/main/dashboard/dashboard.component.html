@@ -93,42 +93,52 @@
                 <div class="col-lg-12 font-montserrat" [style.background-color]="educationBodyColor">
                     <span *ngFor="let education of educationDetails">
                         <education-tab [educationInfo]="education.educationInfo" 
-                            [educationInstitute]="education.educationInstitute"
-                            [educationTimeFrame]="education.educationTimeFrame" 
-                            [educationType]="education.educationType"
-                            [bodyColor]="educationBodyColor">
-                        </education-tab>
-                    </span>
-                </div>
+                        [educationInstitute]="education.educationInstitute"
+                        [educationTimeFrame]="education.educationTimeFrame" 
+                        [educationType]="education.educationType"
+                        [bodyColor]="educationBodyColor">
+                    </education-tab>
+                </span>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    <!-- Experience -->
-    <div id="Experience" class="row experience justify-content-center">
-        <div class="d-flex col-lg-10">
-            <div class="col-lg-8 experience-main" [style.background-color]="experienceBodyColor">
-                <div class="col-lg-12 font-montserrat" [style.background-color]="experienceBodyColor">
-                    <span *ngFor="let exp of experienceDetails">
-                        <experience  [corporateName]="exp.corporateName"
-                            [experienceTimeFrame]="exp.experienceTimeFrame"
-                            [experienceDetails]="exp.experienceDetails"
-                            [bodyColor]="experienceBodyColor" 
-                            [sectionColor]="experienceColor"
-                            [logoSrc]="'https://image.samsungsds.com/module_src/images/default/logo_black.svg?queryString=20220517110935'">
-                        </experience>
-                    </span>
-                </div>
-            </div>
-            <div  [style.background-color]="experienceColor" class="col-lg-4 section-dafault font-montserrat">
-                Experience
-            </div>
+</div>
+
+
+
+
+<!-- Experience -->
+<div id="Experience" class="row experience justify-content-center">
+    <div class="d-flex col-lg-10">
+        <div class="col-lg-8 experience-main" [style.background-color]="experienceBodyColor">
+            <div class="col-lg-12 font-montserrat" [style.background-color]="experienceBodyColor">
+                <span *ngFor="let exp of experienceDetails">
+                    <experience  [corporateName]="exp.corporateName"
+                    [experienceTimeFrame]="exp.experienceTimeFrame"
+                    [experienceDetails]="exp.experienceDetails"
+                    [bodyColor]="experienceBodyColor" 
+                    [sectionColor]="experienceColor"
+                    [logoSrc]="'https://image.samsungsds.com/module_src/images/default/logo_black.svg?queryString=20220517110935'">
+                </experience>
+            </span>
         </div>
     </div>
+    <div  [style.background-color]="experienceColor" class="col-lg-4 section-dafault font-montserrat">
+        Experience
+    </div>
+</div>
+</div>
 
 
-    
+<!-- Footer -->
+<div class="row social-main justify-content-center">
+    <div class="d-flex col-lg-10 social-media">
+        <a class="social-media-icons shade-dark" href="https://www.instagram.com/hiteshsandal11/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a class="social-media-icons shade-dark" href="https://www.linkedin.com/in/hitesh-sandal-289896138/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    </div>
+</div>
+
+
+
+
 </div>

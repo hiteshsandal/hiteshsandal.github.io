@@ -145,7 +145,7 @@ i#intro-i{
 }
 
 .main-component{
-    padding-bottom: 7rem;
+    padding-bottom: 3rem;
 }
 
 .section-dafault{
@@ -183,12 +183,22 @@ i#intro-i{
 }
 
 
-.social-media{
-    position: fixed;
+.social-main{
+    height: 5rem;
 }
 
 .social-media li{
     list-style: none;
     /* transform: rotate(270deg);
     display: flex; */
+}
+
+.social-media{
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-icons{
+    margin: 0rem 1rem;
+    font-size: 2rem;
 }
