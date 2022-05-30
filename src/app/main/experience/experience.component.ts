@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  panelOpenState = false;
+  panelOpenState = true;
   @Input() bodyColor: string = "";
   @Input() sectionColor: string = "";
   @Input() experienceTimeFrame: string = "";
