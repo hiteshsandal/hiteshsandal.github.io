@@ -12,10 +12,12 @@ export class ExperienceComponent implements OnInit {
   @Input() experienceTimeFrame: string = "";
   @Input() experienceDetails: string = "";
   @Input() corporateName: string = "";
+  @Input() logoSrc: string = "";
   constructor() { }
 
   ngOnInit(): void {
     this.sectionColor = "#fff";
+    console.log(this.logoSrc);
   }
 
 }
