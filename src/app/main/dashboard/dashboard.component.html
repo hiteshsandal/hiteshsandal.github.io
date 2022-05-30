@@ -10,71 +10,102 @@
     
 </header>
 
-
-<div class="main-component">
-    <!-- introduction -->
-    <div id="Home" class="row justify-content-center introduction">
-        <div class="d-flex col-lg-10">
-            <div class="col-lg-4">
-                <img id="dashboard-img" class="img-fluid" src="./assets/resume_dashboard.jpeg" alt="Hitesh Sandal">
-            </div>
-            <div class="col-lg-8 shade-medium-bg d-flex justify-content-center align-items-center"style="position:relative;">
-                <div class="col-lg-9">
-                    <h3 class="shade-medium-bg shade-dark font-montserrat name my-0">Hello, I'm  <br/> <span class="code shade-medium-bg">{{ '{' }}</span> Hitesh <br /> Sandal <span class="code shade-medium-bg">{{ '}' }}</span></h3>
-                    <i id="intro-i" class="fa-solid fa-quote-left shade-medium-bg"></i>
-                    <p class="shade-medium-bg shade-dark mb-0 py-5 career-objective">{{introduction}}</p>
+<div class="d-flex" style="position: relative;">
+    <div class="menu-social-media d-sm-none d-lg-block justify-content-center align-items-center">
+        <a href="https://www.instagram.com/hiteshsandal11/" class="shade-dark font-montserrat" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a> 
+        <a href="https://www.linkedin.com/in/hitesh-sandal-289896138/" class="shade-dark font-montserrat" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a> 
+        <a class="social-menu-title font-montserrat shade-dark d-xs-none">Hitesh Sandal</a>
+    </div>
+    
+    <div class="main-component">
+        <!-- introduction -->
+        <div id="Home" class="row justify-content-center introduction">
+            <div class="d-flex col-lg-10">
+                <div class="col-lg-4">
+                    <img id="dashboard-img" class="img-fluid" src="./assets/resume_dashboard.jpeg" alt="Hitesh Sandal">
                 </div>
+                <div class="col-lg-8 shade-medium-bg d-flex justify-content-center align-items-center"style="position:relative;">
+                    <div class="col-lg-9">
+                        <h3 class="shade-medium-bg shade-dark font-montserrat name my-0">Hello, I'm  <br/> <span class="code shade-medium-bg">{{ '{' }}</span> Hitesh <br /> Sandal <span class="code shade-medium-bg">{{ '}' }}</span></h3>
+                        <i id="intro-i" class="fa-solid fa-quote-left shade-medium-bg"></i>
+                        <p class="shade-medium-bg shade-dark mb-0 py-5 career-objective">{{introduction}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- about -->
+        <div id="About" class="row about justify-content-center">
+            <div class="d-flex col-lg-10">
+                <div class="col-lg-4 about-text section-dafault font-montserrat">
+                    About
+                </div>
+                <div class="col-lg-8 about-main" style="position: relative;">
+                    <div class="col-lg-10 wb">
+                        <i class="fa-brands fa-angular about-i angular-icon"></i>
+                        <i class="fa-solid fa-server about-i server-icon"></i>
+                        <i class="fa-brands fa-jira about-i jira-icon"></i>
+                        <i class="fa-brands fa-confluence about-i confluence-icon"></i>
+                        <i class="fa-solid fa-quote-left shade-medium-bg convo-icon about-i"></i>
+                        <i class="fa-solid fa-code about-i code-i"></i>
+                        <p class="wb shade-dark font-montserrat" [innerHTML]="about"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Skills -->
+        <div id="Skills" class="row skills justify-content-center">
+            <div class="d-flex col-lg-10">
                 
-            </div>
-        </div>
-    </div>
-    
-    
-    <!-- about -->
-    <div id="About" class="row about justify-content-center">
-        <div class="d-flex col-lg-10">
-            <div class="col-lg-4 about-text section-dafault font-montserrat">
-                About
-            </div>
-            <div class="col-lg-8 about-main" style="position: relative;">
-                <div class="col-lg-10 wb">
-                    <i class="fa-brands fa-angular about-i angular-icon"></i>
-                    <i class="fa-solid fa-server about-i server-icon"></i>
-                    <i class="fa-brands fa-jira about-i jira-icon"></i>
-                    <i class="fa-brands fa-confluence about-i confluence-icon"></i>
-                    <i class="fa-solid fa-quote-left shade-medium-bg convo-icon about-i"></i>
-                    <i class="fa-solid fa-code about-i code-i"></i>
-                    <p class="wb shade-dark font-montserrat" [innerHTML]="about"></p>
+                <div class="col-lg-8 skills-main" style="position: relative;">
+                    <div class="col-lg-9 shade-medium-bg font-montserrat">
+                        <h4 class="shade-dark shade-medium-bg font-montserrat mb-3">Professional/Personal Skills</h4>
+                        <p class="shade-dark shade-medium-bg">{{skillsWelcomeText}}</p>
+                        <i class="fa-brands fa-angular about-i angular-icon"></i>
+                        <i class="fa-solid fa-server about-i server-icon"></i>
+                        <i class="fa-brands fa-jira about-i jira-icon"></i>
+                        <i class="fa-brands fa-confluence about-i confluence-icon"></i>
+                        <i class="fa-solid fa-quote-left shade-medium-bg convo-icon about-i"></i>
+                        <i class="fa-solid fa-code about-i code-i"></i>
+                        
+                        <span *ngFor="let skill of skills">
+                            <progress-bar class="shade-medium-bg" [skillsColor]="skillsColor" [skillName]="skill.name" [skillProgress]="skill.progress | stringToNumber" ></progress-bar>
+                        </span>
+                        
+                    </div>
+                </div>
+                <div  [style.background-color]="skillsColor" class="col-lg-4 skills-text section-dafault font-montserrat">
+                    Skills
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-    
-    <!-- Skills -->
-    <div id="Skills" class="row skills justify-content-center">
-        <div class="d-flex col-lg-10">
-            
-            <div class="col-lg-8 skills-main" style="position: relative;">
-                <div class="col-lg-9 shade-medium-bg font-montserrat">
-                    <h4 class="shade-dark shade-medium-bg font-montserrat mb-3">Professional/Personal Skills</h4>
-                    <p class="shade-dark shade-medium-bg">{{skillsWelcomeText}}</p>
-                    <i class="fa-brands fa-angular about-i angular-icon"></i>
-                    <i class="fa-solid fa-server about-i server-icon"></i>
-                    <i class="fa-brands fa-jira about-i jira-icon"></i>
-                    <i class="fa-brands fa-confluence about-i confluence-icon"></i>
-                    <i class="fa-solid fa-quote-left shade-medium-bg convo-icon about-i"></i>
-                    <i class="fa-solid fa-code about-i code-i"></i>
-                    
-                    <span *ngFor="let skill of skills">
-                        <progress-bar class="shade-medium-bg" [skillsColor]="skillsColor" [skillName]="skill.name" [skillProgress]="skill.progress | stringToNumber" ></progress-bar>
+        
+        
+        
+        
+        
+        <!-- Education -->
+        <div id="Education" class="row skills justify-content-center">
+            <div class="d-flex col-lg-10">
+                <div  [style.background-color]="educationColor" class="col-lg-4 section-dafault font-montserrat">
+                    Education
+                </div>
+                <div class="col-lg-8" [style.background-color]="educationBodyColor">
+                    <div class="col-lg-12 font-montserrat" [style.background-color]="educationBodyColor">
+                        <span *ngFor="let education of educationDetails">
+                            <education-tab [educationInfo]="education.educationInfo" 
+                            [educationInstitute]="education.educationInstitute"
+                            [educationTimeFrame]="education.educationTimeFrame" 
+                            [educationType]="education.educationType"
+                            [bodyColor]="educationBodyColor">
+                        </education-tab>
                     </span>
-                    
                 </div>
-            </div>
-            <div  [style.background-color]="skillsColor" class="col-lg-4 skills-text section-dafault font-montserrat">
-                Skills
             </div>
         </div>
     </div>
@@ -82,51 +113,26 @@
     
     
     
-    
-    <!-- Education -->
-    <div id="Education" class="row skills justify-content-center">
+    <!-- Experience -->
+    <div id="Experience" class="row experience justify-content-center">
         <div class="d-flex col-lg-10">
-            <div  [style.background-color]="educationColor" class="col-lg-4 section-dafault font-montserrat">
-                Education
-            </div>
-            <div class="col-lg-8" [style.background-color]="educationBodyColor">
-                <div class="col-lg-12 font-montserrat" [style.background-color]="educationBodyColor">
-                    <span *ngFor="let education of educationDetails">
-                        <education-tab [educationInfo]="education.educationInfo" 
-                        [educationInstitute]="education.educationInstitute"
-                        [educationTimeFrame]="education.educationTimeFrame" 
-                        [educationType]="education.educationType"
-                        [bodyColor]="educationBodyColor">
-                    </education-tab>
+            <div class="col-lg-8 experience-main" [style.background-color]="experienceBodyColor">
+                <div class="col-lg-12 font-montserrat" [style.background-color]="experienceBodyColor">
+                    <span *ngFor="let exp of experienceDetails">
+                        <experience  [corporateName]="exp.corporateName"
+                        [experienceTimeFrame]="exp.experienceTimeFrame"
+                        [experienceDetails]="exp.experienceDetails"
+                        [bodyColor]="experienceBodyColor" 
+                        [sectionColor]="experienceColor"
+                        [logoSrc]="'https://image.samsungsds.com/module_src/images/default/logo_black.svg?queryString=20220517110935'">
+                    </experience>
                 </span>
             </div>
         </div>
-    </div>
-</div>
-
-
-
-
-<!-- Experience -->
-<div id="Experience" class="row experience justify-content-center">
-    <div class="d-flex col-lg-10">
-        <div class="col-lg-8 experience-main" [style.background-color]="experienceBodyColor">
-            <div class="col-lg-12 font-montserrat" [style.background-color]="experienceBodyColor">
-                <span *ngFor="let exp of experienceDetails">
-                    <experience  [corporateName]="exp.corporateName"
-                    [experienceTimeFrame]="exp.experienceTimeFrame"
-                    [experienceDetails]="exp.experienceDetails"
-                    [bodyColor]="experienceBodyColor" 
-                    [sectionColor]="experienceColor"
-                    [logoSrc]="'https://image.samsungsds.com/module_src/images/default/logo_black.svg?queryString=20220517110935'">
-                </experience>
-            </span>
+        <div  [style.background-color]="experienceColor" class="col-lg-4 section-dafault font-montserrat">
+            Experience
         </div>
     </div>
-    <div  [style.background-color]="experienceColor" class="col-lg-4 section-dafault font-montserrat">
-        Experience
-    </div>
-</div>
 </div>
 
 
@@ -139,6 +145,5 @@
 </div>
 
 
-
-
+</div>
 </div>
