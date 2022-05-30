@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDBService } from '../../SharedServices/local-db.service';
+import { LocalDBService } from '../../shared-services/local-db.service';
 import { NavbarOption, SkillsOption, EducationDetails, ExperienceDetails } from '../../model/resume.model';
 
 @Component({

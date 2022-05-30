@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { LocalDBService } from '../SharedServices/local-db.service';
+import { LocalDBService } from '../shared-services/local-db.service';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { StringToNumberPipe } from '../Pipe/string-to-number.pipe';
+import { StringToNumberPipe } from '../pipes/string-to-number.pipe';
 import { EducationTabComponent } from './education-tab/education-tab.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { MatExpansionModule } from '@angular/material/expansion';
